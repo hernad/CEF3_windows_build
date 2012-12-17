@@ -32,6 +32,7 @@
 #define CEF_INCLUDE_INTERNAL_CEF_TYPES_H_
 #pragma once
 
+#include <limits.h>
 
 #include "include/internal/cef_build.h"
 #include "include/internal/cef_string.h"
