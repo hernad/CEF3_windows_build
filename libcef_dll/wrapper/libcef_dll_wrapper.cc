@@ -31,7 +31,7 @@
 #include "libcef_dll/cpptoc/domevent_listener_cpptoc.h"
 #include "libcef_dll/cpptoc/domvisitor_cpptoc.h"
 #include "libcef_dll/cpptoc/display_handler_cpptoc.h"
-#include "libcef_dll/cpptoc/download_handler_cpptoc.h"
+//#include "libcef_dll/cpptoc/download_handler_cpptoc.h"
 #include "libcef_dll/cpptoc/drag_handler_cpptoc.h"
 #include "libcef_dll/cpptoc/find_handler_cpptoc.h"
 #include "libcef_dll/cpptoc/focus_handler_cpptoc.h"
@@ -128,7 +128,7 @@ CEF_GLOBAL void CefShutdown() {
   DCHECK_EQ(CefDOMNodeCToCpp::DebugObjCt, 0);
   DCHECK_EQ(CefDOMVisitorCppToC::DebugObjCt, 0);
   DCHECK_EQ(CefDisplayHandlerCppToC::DebugObjCt, 0);
-  DCHECK_EQ(CefDownloadHandlerCppToC::DebugObjCt, 0);
+//  DCHECK_EQ(CefDownloadHandlerCppToC::DebugObjCt, 0);
   DCHECK_EQ(CefDragDataCToCpp::DebugObjCt, 0);
   DCHECK_EQ(CefDragHandlerCppToC::DebugObjCt, 0);
   DCHECK_EQ(CefFindHandlerCppToC::DebugObjCt, 0);

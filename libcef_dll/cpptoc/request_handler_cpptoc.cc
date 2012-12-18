@@ -11,7 +11,7 @@
 //
 
 #include "libcef_dll/cpptoc/content_filter_cpptoc.h"
-#include "libcef_dll/cpptoc/download_handler_cpptoc.h"
+//#include "libcef_dll/cpptoc/download_handler_cpptoc.h"
 #include "libcef_dll/cpptoc/request_handler_cpptoc.h"
 #include "libcef_dll/ctocpp/browser_ctocpp.h"
 #include "libcef_dll/ctocpp/cookie_manager_ctocpp.h"
@@ -241,6 +241,7 @@ int CEF_CALLBACK request_handler_on_protocol_execution(
   return _retval;
 }
 
+/*
 int CEF_CALLBACK request_handler_get_download_handler(
     struct _cef_request_handler_t* self, cef_browser_t* browser,
     const cef_string_t* mimeType, const cef_string_t* fileName,
@@ -296,6 +297,8 @@ int CEF_CALLBACK request_handler_get_download_handler(
   return _retval;
 }
 
+*/
+
 int CEF_CALLBACK request_handler_get_auth_credentials(
     struct _cef_request_handler_t* self, cef_browser_t* browser, int isProxy,
     const cef_string_t* host, int port, const cef_string_t* realm,
@@ -348,6 +351,7 @@ int CEF_CALLBACK request_handler_get_auth_credentials(
   return _retval;
 }
 
+
 cef_cookie_manager_t* CEF_CALLBACK request_handler_get_cookie_manager(
     struct _cef_request_handler_t* self, cef_browser_t* browser,
     const cef_string_t* main_url) {
@@ -387,7 +391,7 @@ CefRequestHandlerCppToC::CefRequestHandlerCppToC(CefRequestHandler* cls)
   struct_.struct_.on_resource_redirect = request_handler_on_resource_redirect;
   struct_.struct_.on_resource_response = request_handler_on_resource_response;
   struct_.struct_.on_protocol_execution = request_handler_on_protocol_execution;
-  struct_.struct_.get_download_handler = request_handler_get_download_handler;
+//  struct_.struct_.get_download_handler = request_handler_get_download_handler;
   struct_.struct_.get_auth_credentials = request_handler_get_auth_credentials;
   struct_.struct_.get_cookie_manager = request_handler_get_cookie_manager;
 }
