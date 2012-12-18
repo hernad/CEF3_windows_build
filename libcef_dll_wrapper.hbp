@@ -1,11 +1,13 @@
 -hblib
--o libcef_dll_wrapper.a
+#-o libcef_dll_wrapper.a
+
+-ocefwrapper
 
 -incpath=.
 
 #-workdir=.t
 #-cflag=-w
-#-cflag=-m32 -w -DUSING_CEF_SHARED
+
 
 -cflag=-m32 
 -cflag=-w 
@@ -13,37 +15,41 @@
 -cflag=-DWIN32
 -cflag=-DOS_WIN
 -cflag=-DUNICODE
+-cflag=-D_UNICODE
 -winuni
 
-cefclient/binding_test.cpp
-cefclient/cefclient.cpp
-cefclient/cefclient_switches.cpp
+#cefclient/binding_test.cpp
+#cefclient/cefclient.cpp
+#cefclient/cefclient_switches.cpp
 
-cefclient/cefclient_win.cpp
+#cefclient/cefclient_win.cpp
 
-cefclient/client_handler.cpp
-cefclient/client_handler_win.cpp
+#cefclient/client_handler.cpp
+#cefclient/client_handler_win.cpp
 
-cefclient/client_popup_handler.cpp
+#cefclient/client_popup_handler.cpp
 
 #atlbase.h
 #cefclient/clientplugin.cpp
 #cefclient/plugin_test.cpp
 
 #cefclient/download_handler.cpp
-cefclient/extension_test.cpp
+
+#cefclient/extension_test.cpp
+
 #cefclient/osrenderer.cpp
 #cefclient/osrplugin.cpp
 #cefclient/osrplugin_test.cpp
 
-cefclient/resource_util_win.cpp
-cefclient/scheme_test.cpp
-cefclient/string_util.cpp
+#cefclient/resource_util_win.cpp
+#cefclient/scheme_test.cpp
+#cefclient/string_util.cpp
+
 #cefclient/uiplugin.cpp
 #cefclient/uiplugin_test.cpp
 
 
-cef_wrap.c
+#cef_wrap.c
 
 libcef_dll/wrapper/cef_byte_read_handler.cc
 libcef_dll/wrapper/cef_xml_object.cc
@@ -110,6 +116,4 @@ libcef_dll/ctocpp/v8value_ctocpp.cc
 libcef_dll/ctocpp/web_plugin_info_ctocpp.cc
 libcef_dll/ctocpp/web_urlrequest_ctocpp.cc
 libcef_dll/ctocpp/xml_reader_ctocpp.cc
-
-
 libcef_dll/ctocpp/zip_reader_ctocpp.cc
