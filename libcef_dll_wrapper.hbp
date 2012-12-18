@@ -43,7 +43,7 @@ cefclient/string_util.cpp
 #cefclient/uiplugin_test.cpp
 
 
-#cef_wrap.c
+cef_wrap.c
 
 libcef_dll/wrapper/cef_byte_read_handler.cc
 libcef_dll/wrapper/cef_xml_object.cc
