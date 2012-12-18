@@ -755,15 +755,7 @@
 				>
 			</File>
 			<File
-				RelativePath="cefclient\uiplugin.cpp"
-				>
-			</File>
-			<File
 				RelativePath="cefclient\uiplugin.h"
-				>
-			</File>
-			<File
-				RelativePath="cefclient\uiplugin_test.cpp"
 				>
 			</File>
 			<File

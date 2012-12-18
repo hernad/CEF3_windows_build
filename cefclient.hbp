@@ -1,5 +1,4 @@
--hblib
--o libcef_dll_wrapper.a
+-ocefclient_mingw
 
 -incpath=.
 
@@ -24,5 +23,8 @@ cefclient/*.cpp
 #libcef_dll/cpptoc/base_cpptoc.cc
 #libcef_dll/ctocpp/base_ctocpp.cc
 
-
+-L.
+-lcef_dll
+-lstdc++
 -lcef_dll_wrapper
+-lglu32
