@@ -20,6 +20,7 @@
 -cflag=-D_WIN32
 -cflag=-DOS_WIN
 -cflag=-DUNICODE
+-cflag=-mthreads
 -winuni
 
 
