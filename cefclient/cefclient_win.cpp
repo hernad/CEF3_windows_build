@@ -5,6 +5,11 @@
 #ifdef FROM_HARBOUR
 #include "hbapierr.h"
 #include "hbapiitm.h"
+
+extern "C" {
+HB_FUNC(CEF1);
+}
+
 #endif
 
 #include "../win32_gui/include/resource.h"
