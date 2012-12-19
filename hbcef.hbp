@@ -3,13 +3,15 @@
 -mt
 
 #harbour dll
--hbdynvm
+#-hbdynvm
+-hbdyn
+
 #library for linking
 -hbimplib
 
 -inc
-#-nohblib
-#-nodefgt
+-nohblib
+-nodefgt
 -workdir=.t
 -incpath=.
 -cpp
@@ -54,6 +56,9 @@
 -Lc:/knowhowERP/hbout/lib/msvc
 #-Lc:/knowhowERP/hbout/lib
 -L.
+#-lharbour
+-lhbvmmt
+-lhbmaindllp
 -llibcef
 -lglu32
 -lkernel32

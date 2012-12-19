@@ -1,7 +1,7 @@
 -ohbcef_test
 #-gui
--mt
-
+#-mt
+-shared
 
 -inc
 #-nohblib
@@ -52,5 +52,8 @@
 
 
 cefclient/cefclient.rc
+
+#cef_wrap.c
+
 test.prg
 

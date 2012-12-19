@@ -8,6 +8,7 @@
 
 extern "C" {
 HB_FUNC(CEF1);
+
 }
 
 #endif
