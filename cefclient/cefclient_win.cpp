@@ -73,9 +73,9 @@ extern CefRefPtr<ClientHandler> g_handler;
 
 // Program entry point function.
 
-int APIENTRY WinMain(HINSTANCE hInstance,
+int APIENTRY wWinMain(HINSTANCE hInstance,
                      HINSTANCE hPrevInstance,
-                     LPSTR    lpCmdLine,
+                     LPTSTR    lpCmdLine,
                      int       nCmdShow)
 {
   UNREFERENCED_PARAMETER(hPrevInstance);

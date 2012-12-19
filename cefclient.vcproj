@@ -94,6 +94,7 @@
 				SubSystem="2"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
+				EntryPointSymbol="wWinMainCRTStartup"
 				FixedBaseAddress="1"
 				ImportLibrary="$(OutDir)\lib\$(TargetName).lib"
 				TargetMachine="1"
@@ -698,30 +699,6 @@
 				>
 			</File>
 			<File
-				RelativePath="cefclient\osrenderer.cpp"
-				>
-			</File>
-			<File
-				RelativePath="cefclient\osrenderer.h"
-				>
-			</File>
-			<File
-				RelativePath="cefclient\osrplugin.cpp"
-				>
-			</File>
-			<File
-				RelativePath="cefclient\osrplugin.h"
-				>
-			</File>
-			<File
-				RelativePath="cefclient\osrplugin_test.cpp"
-				>
-			</File>
-			<File
-				RelativePath="cefclient\osrplugin_test.h"
-				>
-			</File>
-			<File
 				RelativePath="cefclient\plugin_test.h"
 				>
 			</File>
@@ -751,14 +728,6 @@
 			</File>
 			<File
 				RelativePath="cefclient\string_util.h"
-				>
-			</File>
-			<File
-				RelativePath="cefclient\uiplugin.h"
-				>
-			</File>
-			<File
-				RelativePath="cefclient\uiplugin_test.h"
 				>
 			</File>
 			<File

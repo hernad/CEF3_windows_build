@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cefclient_gyp", "cefclient_gyp.vcproj", "{6617FED9-C5D4-4907-BF55-A90062A6683F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A9D6DC71-C0DC-4549-AEA0-3B15B44E86A9} = {A9D6DC71-C0DC-4549-AEA0-3B15B44E86A9}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcef_dll_wrapper_gyp", "libcef_dll_wrapper_gyp.vcproj", "{A9D6DC71-C0DC-4549-AEA0-3B15B44E86A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Win32 = Default|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6617FED9-C5D4-4907-BF55-A90062A6683F}.Default|Win32.ActiveCfg = Default|Win32
+		{6617FED9-C5D4-4907-BF55-A90062A6683F}.Default|Win32.Build.0 = Default|Win32
+		{A9D6DC71-C0DC-4549-AEA0-3B15B44E86A9}.Default|Win32.ActiveCfg = Default|Win32
+		{A9D6DC71-C0DC-4549-AEA0-3B15B44E86A9}.Default|Win32.Build.0 = Default|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal

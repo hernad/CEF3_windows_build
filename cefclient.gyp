@@ -18,7 +18,7 @@
   ],
   'targets': [
     {
-      'target_name': 'cefclient',
+      'target_name': 'cefclient_gyp',
       'type': 'executable',
       'mac_bundle': 1,
       'msvs_guid': '6617FED9-C5D4-4907-BF55-A90062A6683F',
@@ -66,6 +66,8 @@
               '-lrpcrt4.lib',
               '-lopengl32.lib',
               '-lglu32.lib',
+              '-l$(HB_LIB)/harbour-32.lib',
+              '-l$(HB_LIB)/hbrtl.lib',
               '-llib/$(ConfigurationName)/libcef.lib'
             ],
           },
@@ -121,7 +123,7 @@
       ],
     },
     {
-      'target_name': 'libcef_dll_wrapper',
+      'target_name': 'libcef_dll_wrapper_gyp',
       'type': 'static_library',
       'msvs_guid': 'A9D6DC71-C0DC-4549-AEA0-3B15B44E86A9',
       'defines': [

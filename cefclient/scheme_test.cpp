@@ -3,7 +3,7 @@
 // can be found in the LICENSE file.
 
 
-#define NOMINMAX
+//#define NOMINMAX
 
 #include "cefclient/scheme_test.h"
 #include <algorithm>
