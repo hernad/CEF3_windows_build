@@ -1,6 +1,11 @@
 -ocefclient_mingw
 -cpp
 
+
+-gui
+-nohblib
+-nodefgt
+
 -incpath=.
 
 -workdir=.t
@@ -9,12 +14,18 @@
 -cflag=-m32 
 -cflag=-w
 -cflag=-DUSING_CEF_SHARED
+-cflag=-DCOMPILER_MINGW
 -cflag=-D_MINGW_VER
 -cflag=-DWIN32
 -cflag=-D_WIN32
 -cflag=-DOS_WIN
 -cflag=-DUNICODE
 -winuni
+
+
+#-ldflag='--subsystem windows'
+#-ldflag='-e _wWinMain@16'
+
 
 cefclient/*.cpp
 
