@@ -1,3 +1,11 @@
+# Build
+
+Ajojjjjj
+
+3-4 dana izgubio radi toga sto se desava segfault icudt.dll   locales 
+
+
+
 $ gcc mywin.c -L. -lbinding_test   -lcef_dll -licudt_dll -lglesv2_dll -legl_dll
  -ld3dx9_43_dll -ld3dcompiler_43_dll  -lstdc++  -lcomctl32 -Wl,--subsystem,wind
 ows -lcomdlg32 -lshell32 -luser32 -lkernel32 -lgdi32 -loleaut32
