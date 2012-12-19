@@ -8,47 +8,45 @@
 #-nodefgt
 -workdir=.t
 -incpath=.
--cpp
+#-cpp
 
--cflag+=/DWIN32
--cflag+=/D_WIN32
--cflag+=/DOS_WIN
--cflag+=/DUNICODE
--cflag+=/D_UNICODE
+#-cflag+=/DWIN32
+#-cflag+=/D_WIN32
+#-cflag+=/DOS_WIN
+#-cflag+=/DUNICODE
+#-cflag+=/D_UNICODE
 #-cflag+=/DHARBOUR
 
--cflag+=/W1
--cflag+=/O2
--cflag+=/EHsc
--cflag+=/fp:precise
--cflag+=/Zc:wchart_t
--cflag+=/Zc:forScope
--cflag+=/GF 
--cflag+=/FD
--cflag+=/MT
--cflag+=/Gy
--cflag+=/GR-
+#-cflag+=/W1
+#-cflag+=/O2
+#-cflag+=/EHsc
+#-cflag+=/fp:precise
+#-cflag+=/Zc:wchart_t
+#-cflag+=/Zc:forScope
+#-cflag+=/GF 
+#-cflag+=/FD
+#-cflag+=/MT
+#-cflag+=/Gy
+#-cflag+=/GR-
 
--cflag+=/Gd
--cflag+=/TP
--cflag+=-DFROM_HARBOUR
--cflag+=-DUSING_CEF_SHARED
+#-cflag+=/Gd
+#-cflag+=/TP
+#-cflag+=-DFROM_HARBOUR
+#-cflag+=-DUSING_CEF_SHARED
 
--winuni
+#-winuni
 
 #nemoj default flagove
 #-bldf-
 
--ldflag=/OPT:REF
--ldflag=/OPT:ICF
-#-ldflag=/IMPLIB:"cefclient.lib" 
+#-ldflag=/OPT:REF
+#-ldflag=/OPT:ICF
 
--ldflag=/DYNAMICBASE 
--ldflag=/NXCOMPAT
-#-ldflag=/ERRORREPORT:PROMPT
+#-ldflag=/DYNAMICBASE 
+#-ldflag=/NXCOMPAT
 
--Lc:/knowhowERP/hbout/lib/msvc
-#-Lc:/knowhowERP/hbout/lib
+{msvc}-Lc:/knowhowERP/hbout/lib/msvc
+-Lc:/knowhowERP/hbout/lib
 -L.
 -lhbcef
 
