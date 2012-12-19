@@ -9,52 +9,75 @@
 -mt=yes
 -cpp
 
--cflag=-DWIN32
--cflag=-D_WIN32
--cflag=-DOS_WIN
--cflag=-DUNICODE
--cflag=-D_UNICODE
+-cflag+=/DWIN32
+-cflag+=/D_WIN32
+-cflag+=/DOS_WIN
+-cflag+=/DUNICODE
+-cflag+=/D_UNICODE
 
--cflag=/GF 
--cflag=/FD
--cflag=/MT
--cflag=/Gy
--cflag=/GR-
+-cflag+=/W1
+-cflag+=/O2
+-cflag+=/EHsc
+-cflag+=/fp:precise
+-cflag+=/Zc:wchart_t
+-cflag+=/Zc:forScope
+-cflag+=/GF 
+-cflag+=/FD
+-cflag+=/MT
+-cflag+=/Gy
+-cflag+=/GR-
 
--cflag=/Gd
--cflag=/TP
--cflag=-DUSING_CEF_SHARED
+-cflag+=/Gd
+-cflag+=/TP
+-cflag+=-DUSING_CEF_SHARED
 
 -winuni
 
-#-ldflag=-s
+#nemoj default flagove
+#-bldf-
+
 -ldflag=/OPT:REF
 -ldflag=/OPT:ICF
 #-ldflag=/IMPLIB:"cefclient.lib" 
 
+-ldflag=/DYNAMICBASE 
+-ldflag=/NXCOMPAT
+#-ldflag=/ERRORREPORT:PROMPT
+
+
 -Lc:/knowhowERP/hbout/lib
 -L.
 -llibcef
--llibcef_dll_wrapper
 -lglu32
 -lkernel32
--gdi32
+-lgdi32
 -luser32
 -lmsimg32
 -lcomdlg32
 -lwinspool
 -lshell32
 -lshlwapi
+-lrpcrt4
+-lopengl32
+-lglu32 
+-ladvapi32 
+-lshell32
+-lole32 
+-loleaut32
+-luuid 
+-lodbc32 
+-lodbccp32
 
 cefclient/*.cpp
 
-#cef_wrap.c
+cefclient/cefclient.rc
 
+cef_wrap.c
 
-#libcef_dll/*.cpp
-#libcef_dll/cpptoc/*.cc
-#libcef_dll/ctocpp/*.cc
+libcef_dll/*.cpp
+libcef_dll/cpptoc/*.cc
+libcef_dll/ctocpp/*.cc
+libcef_dll/wrapper/*.cc
 
-#libcef_dll/wrapper/*.cc
 
 

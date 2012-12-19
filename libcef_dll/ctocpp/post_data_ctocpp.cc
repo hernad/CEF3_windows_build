@@ -9,7 +9,7 @@
 // implementations. See the translator.README.txt file in the tools directory
 // for more information.
 //
-//#define NOMINMAX
+#define NOMINMAX
 #include "libcef_dll/ctocpp/post_data_ctocpp.h"
 #include "libcef_dll/ctocpp/post_data_element_ctocpp.h"
 
