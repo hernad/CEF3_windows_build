@@ -94,7 +94,6 @@
 				SubSystem="2"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
-				EntryPointSymbol="wWinMainCRTStartup"
 				FixedBaseAddress="1"
 				ImportLibrary="$(OutDir)\lib\$(TargetName).lib"
 				TargetMachine="1"

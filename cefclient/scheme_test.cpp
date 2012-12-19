@@ -2,6 +2,9 @@
 // reserved. Use of this source code is governed by a BSD-style license that
 // can be found in the LICENSE file.
 
+
+#define NOMINMAX
+
 #include "cefclient/scheme_test.h"
 #include <algorithm>
 #include <string>
