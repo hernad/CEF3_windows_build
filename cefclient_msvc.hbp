@@ -9,19 +9,11 @@
 -mt=yes
 -cpp
 
-#-workdir=.t
-#-cflag=-w
-#-cflag=-m32 -w -DUSING_CEF_SHARED
-
-#-cflag=-m32 
-#-cflag=-w 
-#-cflag=-D_MINGW_VER
 -cflag=-DWIN32
 -cflag=-D_WIN32
 -cflag=-DOS_WIN
 -cflag=-DUNICODE
-#-cflag=-fno-rtti
-#-cflag=-mthreads
+-cflag=-D_UNICODE
 
 -cflag=/GF 
 -cflag=/FD
@@ -29,12 +21,8 @@
 -cflag=/Gy
 -cflag=/GR-
 
-#__cdecl
 -cflag=/Gd
-#c++
 -cflag=/TP
-
-
 -cflag=-DUSING_CEF_SHARED
 
 -winuni
@@ -42,12 +30,11 @@
 #-ldflag=-s
 -ldflag=/OPT:REF
 -ldflag=/OPT:ICF
--ldflag=/IMPLIB:"cefclient.lib" 
+#-ldflag=/IMPLIB:"cefclient.lib" 
 
 -Lc:/knowhowERP/hbout/lib
 -L.
 -llibcef
-#-lstdc++
 -llibcef_dll_wrapper
 -lglu32
 -lkernel32
