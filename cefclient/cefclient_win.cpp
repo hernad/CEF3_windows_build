@@ -2,8 +2,10 @@
 // reserved. Use of this source code is governed by a BSD-style license that
 // can be found in the LICENSE file.
 
-//#include "hbapierr.h"
-//#include "hbapiitm.h"
+#ifdef FROM_HARBOUR
+#include "hbapierr.h"
+#include "hbapiitm.h"
+#endif
 
 #include "../win32_gui/include/resource.h"
 
@@ -175,112 +177,23 @@ int APIENTRY wWinMain(HINSTANCE hInstance,
 }
 
 
-/*
-// Our application entry point.
-int WinMain3(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
-//int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
-{
-  //INITCOMMONCONTROLSEX icc;
-  WNDCLASSEX wc;
-  LPCTSTR MainWndClass = TEXT("MinGW Win32 Application");
-  HWND hWnd;
-  HACCEL hAccelerators;
-  HMENU hSysMenu;
-  MSG msg;
-
-  // Initialise common controls.
-  //icc.dwSize = sizeof(icc);
-  //icc.dwICC = ICC_WIN95_CLASSES;
-  //InitCommonControlsEx(&icc);
-
-  // Class for our main window.
-  wc.cbSize        = sizeof(wc);
-  wc.style         = 0;
-  //wc.lpfnWndProc   = &MainWndProc;
-  wc.lpfnWndProc = &DefWindowProc; //(hWnd, msg, wParam, lParam);
-
-  wc.cbClsExtra    = 0;
-  wc.cbWndExtra    = 0;
-  wc.hInstance     = hInstance;
-  //wc.hIcon         = (HICON) LoadImage(hInstance, MAKEINTRESOURCE(IDI_APPICON), IMAGE_ICON, 0, 0, LR_SHARED);
-  //wc.hCursor       = (HCURSOR) LoadImage(NULL, IDC_ARROW, IMAGE_CURSOR, 0, 0, LR_SHARED);
-  wc.hbrBackground = (HBRUSH) (COLOR_BTNFACE + 1);
-  //wc.lpszMenuName  = MAKEINTRESOURCE(IDR_MAINMENU);
-  wc.lpszClassName = MainWndClass;
-  //wc.hIconSm       = (HICON) LoadImage(hInstance, MAKEINTRESOURCE(IDI_APPICON), IMAGE_ICON, 16, 16, LR_SHARED);
-
-  
-  // Register our window classes, or error.
-  if (! RegisterClassEx(&wc))
-  {
-    MessageBox(NULL, TEXT("Error registering window class."), TEXT("Error"), MB_ICONERROR | MB_OK);
-    return 0;
-  }
-  
-  
-  // Create instance of main window.
-  hWnd = CreateWindowEx(0, NULL, MainWndClass, WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT,
-                        320, 200, NULL, NULL, hInstance, NULL);
-
-  // Error if window creation failed.
-  if (! hWnd)
-  {
-    MessageBox(NULL, TEXT("Error creating main window."), TEXT("Error"), MB_ICONERROR | MB_OK);
-    return 0;
-  }
-
-  // Load accelerators.
-  //hAccelerators = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDR_ACCELERATOR));
-
-  // Add "about" to the system menu.
-  //hSysMenu = GetSystemMenu(hWnd, FALSE);
-  //InsertMenu(hSysMenu, 5, MF_BYPOSITION | MF_SEPARATOR, 0, NULL);
-  //InsertMenu(hSysMenu, 6, MF_BYPOSITION, ID_HELP_ABOUT, TEXT("About"));
-
-  // Show window and force a paint.
-  ShowWindow(hWnd, nCmdShow);
-  UpdateWindow(hWnd);
-
-  // Main message loop.
-  while(GetMessage(&msg, NULL, 0, 0) > 0)
-  {
-    //if (! TranslateAccelerator(msg.hwnd, hAccelerators, &msg))
-    //{
-      TranslateMessage(&msg);
-      DispatchMessage(&msg);
-    //}
-  }
-
-  return (int) msg.wParam;
-  
-}
-*/
-
-/*
+#ifdef FROM_HARBOUR
 HB_FUNC( CEF1 )
 {
-   //if( HB_ISCHAR( 1 ) )
-   //    hb_PGconn_ret( PQconnectdb( hb_parc( 1 ) ) );
-   //else
-   //   hb_errRT_BASE( EG_ARG, 2020, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 
-   //hb_errRT_BASE( EG_ARG, 2020, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   HWND hWnd = GetActiveWindow();
+   MessageBox(hWnd, L"hello", L"harbour", MB_OK);
 
-  // Retrieve the current working directory.
-//  if (_getcwd(szWorkingDir, MAX_PATH) == NULL)
-//    szWorkingDir[0] = 0;
+   HINSTANCE hInst=GetModuleHandle (0);
 
-   printf("\n\ncef start\n");
+   wWinMain(hInst, NULL, NULL, 1);
 
-   MessageBox(NULL, L"hello", L"world", MB_OK);
+   hb_retc("from cefclient");
    
-   //MessageBox(NULL, TEXT("Error registering window class."), TEXT("Error"), MB_ICONERROR | MB_OK);
-
-   run_main();
-
-   printf("cef1\n");
 }
-*/
+#endif
+
+
 
 
 void run_main() {
@@ -383,7 +296,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam,
         LRESULT strLen = SendMessage(hWnd, EM_GETLINE, 0, (LPARAM)strPtr);
         if (strLen > 0) {
           strPtr[strLen] = 0;
-          browser->GetMainFrame()->LoadURL(strPtr);
+		  browser->GetMainFrame()->LoadURL("file:///c:/github/test.html");
         }
 
         return 0;

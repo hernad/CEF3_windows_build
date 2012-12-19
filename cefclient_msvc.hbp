@@ -30,7 +30,7 @@
 -cflag+=/Gd
 -cflag+=/TP
 -cflag+=-DUSING_CEF_SHARED
-
+-cflag+=-DFROM_HARBOUR
 -winuni
 
 #nemoj default flagove

@@ -20,10 +20,10 @@
 -cflag=-D_WIN32
 -cflag=-DOS_WIN
 -cflag=-DUNICODE
--cflag=-mthreads
+#-cflag=-mthreads
 -winuni
 
-
+-ldflag=-s
 #-ldflag='--subsystem windows'
 #-ldflag='-e _wWinMain@16'
 
