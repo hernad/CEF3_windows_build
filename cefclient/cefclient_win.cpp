@@ -296,7 +296,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam,
         LRESULT strLen = SendMessage(hWnd, EM_GETLINE, 0, (LPARAM)strPtr);
         if (strLen > 0) {
           strPtr[strLen] = 0;
-		  browser->GetMainFrame()->LoadURL("file:///c:/github/test.html");
+		  browser->GetMainFrame()->LoadURL(strPtr);
         }
 
         return 0;

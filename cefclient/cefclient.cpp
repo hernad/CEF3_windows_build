@@ -467,7 +467,8 @@ void RunLocalStorageTest(CefRefPtr<CefBrowser> browser) {
 
 void RunAccelerated2DCanvasTest(CefRefPtr<CefBrowser> browser) {
   browser->GetMainFrame()->LoadURL(
-      "http://mudcu.be/labs/JS1k/BreathingGalaxies.html");
+   //   "http://mudcu.be/labs/JS1k/BreathingGalaxies.html");
+   "file:///C:/github/test.html");
 }
 
 void RunAcceleratedLayersTest(CefRefPtr<CefBrowser> browser) {
