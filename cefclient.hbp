@@ -29,6 +29,7 @@
 
 
 cefclient/*.cpp
+cefclient/cefclient.rc
 
 cef_wrap.c
 
